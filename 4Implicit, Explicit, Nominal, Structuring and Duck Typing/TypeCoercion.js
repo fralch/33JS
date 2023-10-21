@@ -43,3 +43,10 @@
         let z = 10;
         let w= "10";
         z === w; // false
+    
+    // ------ COERCION EN OBJETOS ------ //
+
+    console.log({} + []); // 0
+    console.log([] + {}); // "[object Object]"
+
+
