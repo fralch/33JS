@@ -48,5 +48,13 @@
 
     console.log({} + []); // 0
     console.log([] + {}); // "[object Object]"
+    console.log(2*[2]);  // 4
+    console.log(2*{}); // NaN
+    console.log(2+{}); // "2[object Object]"
+    console.log({} == '[object Object]'); //  true
+    console.log([] == 0); // true
+    console.log(new Date() - new Date()); //  0
+   
+
 
 
