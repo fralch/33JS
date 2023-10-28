@@ -35,3 +35,21 @@
         // Scope de bloque: las variables que estan en el scope de un bloque solo pueden ser llamadas dentro del bloque donde fueron creadas.
             // Un bloque es todo lo que esta dentro de llaves {}.
 
+            if (true) {
+                let frutas = 'Manzana'; // scope de bloque porque esta dentro de un bloque.
+            }
+            console.log(frutas); // no se puede llamar porque esta fuera del bloque donde fue creada.
+
+    
+    // Variable Shadowing: es cuando una variable local tiene el mismo nombre que una variable global, 
+    //y la variable local esta dentro de una función.
+
+        var scope = 'I am global'; // scope global
+
+        const functionScope = () => {
+            if (true) {
+                var scope = 'I am just a local'; // scope local
+                console.log(scope);
+            }
+        }
+        // en este caso la variable scope local esta sombreando a la variable scope global. y la variable scope global no se puede llamar.
