@@ -1,3 +1,9 @@
+/* 
+    para poder import un modulo en el servidor se tiene que usar un package.json con el siguiente contenido:
+    {
+        "type": "module"
+    }
+*/
 import * as math from './math.js';
 
 console.log(math.add(1, 2));
