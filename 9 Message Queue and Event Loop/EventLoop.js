@@ -9,6 +9,9 @@
 
 //https://www.youtube.com/shorts/x8cn5P9Qmf4
 
+// con mucho más detalle : https://www.youtube.com/watch?v=rvzItyLuh28
+
+
 console.log("Start");
 
 setTimeout(() => {
