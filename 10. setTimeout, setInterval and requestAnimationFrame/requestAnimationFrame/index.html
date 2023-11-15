@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+</head>
+<body>
+    <script>
+        // Variable que guarda el índice de la imagen actual en la secuencia de imágenes
+        let currentImageIndex = 0;
+
+        // Función Animate: Cambia la fuente de la imagen para crear la animación
+        function Animate() {
+            // Obtiene el elemento de la imagen por su ID
+            let image = document.getElementById("imagen");
+            
+            // Cambia la fuente de la imagen utilizando el índice actual
+            image.src = "./img/Run (" + currentImageIndex + ").png";
+            
+            // Incrementa el índice para apuntar a la siguiente imagen en la secuencia
+            currentImageIndex++;
+            
+            // Si el índice alcanza 15 (el último índice en la secuencia), reinicia a 1
+            if (currentImageIndex > 15) {
+                currentImageIndex = 1;
+            }
+            
+            // usando requestAnimationFrame para llamar a la función Animate de nuevo
+            setTimeout(() => {
+                requestAnimationFrame(Animate);
+            }, 100);
+
+        }
+        
+        // Función startAnimate: Inicia la animación llamando a la función Animate
+        function startAnimate() {
+            Animate();
+        }
+    </script>
+
+    <!-- Elemento de imagen con ID "imagen" -->
+    <img src="./img/Run (1).png" id="imagen">
+
+    <!-- Botón que inicia la animación cuando se hace clic -->
+    <button onclick="startAnimate()">Start</button>
+
+</body>
+</html>
