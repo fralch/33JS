@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Js</title>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum impedit, minima atque veniam sed iste officia at enim quae voluptatem sapiente odio labore numquam facilis a aut quibusdam cum quis?</p>
+    <div id="div1">
+        <p>Esto es un div</p>
+    </div>
+    <div class="div2">
+        <p>Esto es un div</p>
+    </div>
+
+    <script>
+        // aprendiendo DOM y layout trees
+        console.log(document);
+        console.log(document.head);
+        console.log(document.body);
+
+        console.log(document.getElementById('div1'));
+        console.log(document.getElementsByClassName('div2'));
+        console.log(document.getElementsByTagName('p'));
+        console.log(document.querySelector('#div1'));
+        console.log(document.querySelector('.div2'));
+
+        // modificando el DOM
+        const div1 = document.querySelector('#div1');
+        div1.innerHTML = '<p>Esto es un div modificado</p>';
+        div1.style.backgroundColor = 'red';
+        div1.style.color = 'white';
+        div1.style.padding = '20px';
+
+        // creando elementos
+        const p = document.createElement('p');
+        p.textContent = 'Esto es un nuevo elemento';
+        p.style.backgroundColor = 'blue';
+        p.style.color = 'white';
+        p.style.padding = '20px';
+        document.body.appendChild(p);
+
+        // layout trees
+        // los layout trees son los elementos que se muestran en pantalla
+        console.log(document.body.children);
+
+
+
+    </script>
+</body>
+</html>
