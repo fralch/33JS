@@ -72,6 +72,8 @@ sacha instanceof Desarrollador // false
     Persona.prototype.saludar = function () {
         console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`)
     }
+    
+    
 
 
     Persona.prototype.soyAlto = function () {
