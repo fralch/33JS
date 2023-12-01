@@ -95,3 +95,58 @@
     Object.getPrototypeOf(frank) === cheff // true
     frank.__proto__ === cheff // true
     cheff.isPrototypeOf(frank) // true
+
+
+// this en la cadena de prototipos
+    /* 
+        cuando se llama a un metodo de un objeto, el this hace referencia al objeto que lo llama.
+        pero si este metodo no se encuentra en el objeto, se busca en el prototipo, y el this
+        sigue haciendo referencia al objeto que lo llama, no al prototipo.
+    */
+
+    const cheff2 = {
+        tipo: 'Cocina Basica', 
+        especialidad: 'Pastas', 
+        cocinar : function () {
+            console.log(`Cocinando ${this.especialidad}`)
+        }, 
+        presentarse: function () {
+            console.log(`Hola, soy ${this.nombre} ${this.tipo}`)
+        }
+    }
+
+    const frank2 = {
+        nombre: 'Frank',
+        apellido: 'Gonzalez', 
+        profesion : 'Developer',
+        tipo: 'Full Stack'
+    }
+
+    Object.setPrototypeOf(frank2, cheff2)
+
+    frank2.presentarse() // Hola, soy Frank Full Stack
+    /* 
+        esto es por que el metodo presentarse no se encuentra en el objeto frank2, pero si en el prototipo
+        cheff2, pero el this sigue haciendo referencia al objeto frank2.
+        This enlace implicito : el this hace referencia al objeto que lo llama. o al objeto que esta a la izquierda del punto.
+    */
+
+// Objet create
+
+    /*
+        Object.create() es una funcion que permite crear un objeto con un prototipo especifico.
+        es una alternativa a la funcion constructora.
+    */
+
+    const cheff3 = {
+        tipo: 'Cocina Basica', 
+        especialidad: 'Pastas', 
+        cocinar : function () {
+            console.log(`Cocinando ${this.especialidad}`)
+        }, 
+        presentarse: function () {
+            console.log(`Hola, soy ${this.nombre} ${this.tipo}`)
+        }
+    }
+
+    const frank3 = Object.create(cheff3) // creando un objeto con el prototipo cheff3
