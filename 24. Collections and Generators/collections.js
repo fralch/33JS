@@ -1,4 +1,4 @@
-// collection map js 
+// collection map js -> https://www.youtube.com/watch?v=vra1CscMtQs
 // 1. Map
     console.log('---------MAP------------');
     const map = new Map();
@@ -39,7 +39,7 @@
     console.log(noRepeated);
 
 
-// 3. WeakMap
+// 3. WeakMap -> https://www.youtube.com/watch?v=nfMEnCrBL-0
     console.log('---------WEAKMAP------------');
     const wm = new WeakMap();  // solo acepta objetos como llaves
     const obj = {};
@@ -61,5 +61,5 @@
     ws.delete(obj1); // delete es para eliminar un elemento del weakset
     console.log(ws.has(obj1));
 
-    
+
 //
