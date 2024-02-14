@@ -66,7 +66,7 @@
     miFuncion(promesa3);
 
 
-// Promeses all Settled
+// Promeses all Settled : permite ejecutar todas las promesas sin importar si alguna falla
 
 const promesaA = new Promise((resolve, reject) => {
     setTimeout(() => {
