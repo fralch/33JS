@@ -64,3 +64,22 @@
     
     // Llamar a miFuncion con promesa3 como argumento
     miFuncion(promesa3);
+
+
+// Promeses all Settled
+
+const promesaA = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('la operacion fue exitosa');
+    }, 3000);
+});
+
+const promesaB = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject('hubo un error');
+    }, 2000);
+});
+
+Promise.allSettled([promesaA, promesaB])
+.then(response => console.log(response))
+.catch(error => console.log(error)); // [{status: "fulfilled", value: "la operacion fue exitosa"}, {status: "rejected", reason: "hubo un error"}]
