@@ -7,6 +7,8 @@ El algoritmo obtiene su nombre porque los elementos más pequeños "burbujean" h
 del array.
 El ordenamiento de burbuja es uno de los algoritmos de ordenamiento más simples y menos eficientes.
 Complejidad computacional: O(n^2)
+
+https://lh4.ggpht.com/-eMdOG5T6LRg/ThQAL41wo6I/AAAAAAAAACg/Wfj7BnqrIjQ/Sorting_bubblesort_anim_thumb%25255B1%25255D.gif?imgmax=800
 Ejemplo:
 */
 
